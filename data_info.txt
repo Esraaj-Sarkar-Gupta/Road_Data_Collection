@@ -1,0 +1,26 @@
+Reading the data from road_data.txt:
+
+==== # Boundary 
+L: <latitude> , <longitude>; # Location
+T: <time from unix epoch (milliseconds>; # Time
+DA: # Device acceleration
+X: <x_acceleration>,
+Y: <y_acceleration>,
+Z: <z_acceleration>;
+==== # Boundary
+
+Seperators:
+The ';' is used to seperate different data types 
+The '====' seperates different instances of data 
+The ',' seperates discrete entities of every data type
+
+Our axis of interest will differ based on the orientation of the device.
+If the device is kept flat on its back, we will be looking at the Z axis (which is 9.8 m/s^2 at rest)
+
+Data:
+
+> 5 Minutes of data colletion: 323KB  (~25k lines of data)
+> ...
+
+Edge Cases:
+L: GPS_Buffer # Loading initial GPS locations. Disregard these data points from collection
